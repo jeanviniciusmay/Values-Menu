@@ -1,0 +1,59 @@
+n1 = 0
+n2 = 0
+stop1 = 0
+stop2 = 0
+while stop1 == 0:
+    print(25*'=')
+    n1 = int(input('Type the first value: '))
+    print(25*'=')
+    n2 = int(input('Type the second value: '))
+    print(40 * '=')
+    print('What do you want to do with the two values?')
+    print('''========================================
+    [1] SUM
+    [2] MULTIPLY
+    [3] THE BIGGEST NUMBER
+    [4] NEW NUMBERS
+    [5] EXIT THE PROGRAM
+    ''')
+    option = int(input(' '))
+    print('')
+
+    if option == 1:
+        print('The result of \033[33m{} + {}\033[m = \033[32m{}\033[m.'.format(n1, n2, n1 + n2))
+        stop2 += 1
+
+    elif option == 2:
+        print('The multiplication of \033[33m{} X {}\033[m = \033[32m{}\033[m.'.format(n1, n2, n1 * n2))
+        stop2 += 1
+
+    elif option == 3:
+        if n1 > n2:
+            print('The biggest number between \033[33m{}\033[m and \033[33m{}\033[m is \033[32m{}\033[m.'
+                  .format(n1, n2, n1))
+            stop2 += 1
+        else:
+            print('The biggest number between\033[33m{}\033[m and \033[33m{}\033[m is \033[32m{}\033[m.'
+                  .format(n1, n2, n2))
+        stop2 += 1
+
+    elif option == 4:
+        stop1 == 0
+        stop2 -= 50
+
+    if option == 5:
+        stop1 += 1
+        stop2 == 0
+
+    if stop2 >= 1:
+        stop3 = int(input(''' 
+[1] Type other values 
+[2] End program
+'''))
+        if stop3 == 1:
+            stop1 == 0
+        elif stop3 >= 2:
+            stop1 += 1
+
+
+print('\033[31mProgram ended!')
